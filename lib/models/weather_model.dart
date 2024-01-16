@@ -17,7 +17,7 @@ class WeatherModle {
     required this.condition,
   });
 
-  factory WeatherModle.json(json) {
+  factory WeatherModle.fromjson(json) {
     return WeatherModle(
       cityname: json["location"]['name'],
       date: json["location"]['localtime'],
