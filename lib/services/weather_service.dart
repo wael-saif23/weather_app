@@ -9,7 +9,7 @@ class WeatherServic {
   final String apiBase = "http://api.weatherapi.com/v1";
 
   WeatherServic({required this.dio});
-  Future<WeatherModle?> getWeather({required String cityName}) async {
+  Future<WeatherModle> getWeather({required String cityName}) async {
     try {
       Response response = await dio
           .get("$apiBase/forecast.json?key=$apiKey&q=$cityName&days=1");
