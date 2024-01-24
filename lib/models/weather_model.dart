@@ -1,6 +1,6 @@
 class WeatherModle {
   final String cityname;
-  final String date;
+  final DateTime date;
   final String image;
   final double thetemp;
   final double maxtemp;
@@ -18,9 +18,11 @@ class WeatherModle {
   });
 
   factory WeatherModle.fromjson(json) {
+    // ignore: unused_local_variable
+    DateTime date;
     return WeatherModle(
       cityname: json["location"]['name'],
-      date: json["location"]['localtime'],
+      date: date = DateTime.parse(json["location"]['localtime']),
       image: json["forecast"]["forecastday"][0]['day']['condition']['icon'],
       thetemp: json["forecast"]["forecastday"][0]['day']['avgtemp_c'],
       maxtemp: json["forecast"]["forecastday"][0]['day']['maxtemp_c'],
