@@ -13,11 +13,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 237, 223, 165).withOpacity(.6),
         title: const Text(
           "Weather Stats",
           style: TextStyle(
-            color: Colors.blue,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -33,7 +31,6 @@ class HomeView extends StatelessWidget {
               );
             },
             icon: const Icon(Icons.search),
-            color: Colors.blue,
           )
         ],
       ),

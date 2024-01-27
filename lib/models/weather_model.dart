@@ -22,7 +22,7 @@ class WeatherModle {
     DateTime date;
     return WeatherModle(
       cityname: json["location"]['name'],
-      date: date = DateTime.parse(json["location"]['localtime']),
+      date: date = DateTime.parse(json["current"]['last_updated']),
       image: json["forecast"]["forecastday"][0]['day']['condition']['icon'],
       thetemp: json["forecast"]["forecastday"][0]['day']['avgtemp_c'],
       maxtemp: json["forecast"]["forecastday"][0]['day']['maxtemp_c'],
